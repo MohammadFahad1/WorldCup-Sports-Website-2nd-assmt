@@ -70,8 +70,16 @@ button.btn-red {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid #DD0000;
+    transition: .7s border, .3s color, .3s background;
 }
 
+button.btn-red:hover {
+    border: 2px solid transparent;
+    background: transparent;
+    color: #DD0000;
+    outline: 2px solid #DD0000;
+}
 
 /*---------------
   Main Section
