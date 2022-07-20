@@ -184,6 +184,28 @@ a.active {
     display: none;
 }
 
+.flags {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 40px 20px;
+    line-height: 1;
+    text-align: center;
+    height: 230px;
+}
+
+.vs-flags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.vs-info p {
+    color: gray;
+}
+
+.flag img {
+    width: 100%;
+}
+
 /* Footer Section */
 footer {
     background-color: #161616;
