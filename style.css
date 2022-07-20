@@ -1,4 +1,6 @@
-/* Global Styles */
+/*----------------
+  Global Styles
+----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
@@ -7,14 +9,28 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px 0 0;
 }
 
-/* Header Styles */
+/*----------------
+  Header Styles
+----------------*/
 .top-banner {
     display: flex;
     justify-content: center;
     color: #fff;
     margin-bottom: 100px;
+}
+
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1321px;
+    height: 646px;
+    background-color: #161616;
+    border-radius: 30px;
+    padding: 33px 79px 0;
 }
 
 .banner-image,
@@ -27,6 +43,10 @@ body {
 .banner-wrapper .banner-image img {
     height: 100%;
     padding: 0;
+}
+
+.banner-image img {
+    width: 100%;
 }
 
 .banner-text h1 {
@@ -42,7 +62,7 @@ body {
     line-height: 26px;
 }
 
-.banner-text button {
+button.btn-red {
     padding: 16px 25px;
     font-size: 20px;
     background-color: #DD0000;
@@ -52,33 +72,26 @@ body {
     cursor: pointer;
 }
 
-.banner-wrapper {
-    display: flex;
-    align-items: center;
-    max-width: 1321px;
-    /* max-width: 1100px; */
-    height: 646px;
-    background-color: #161616;
-    border-radius: 30px;
-    padding: 33px 79px 0;
-}
 
-
-/* Main Section */
+/*---------------
+  Main Section
+---------------*/
 main {
     display: flex;
     justify-content: center;
 }
 
 .container {
-    width: 1321px;
+    max-width: 1321px;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(1, 1fr) repeat(1, 3fr);
     column-gap: 24px;
 }
 
-/* Side Navigation Section */
+/*-------------------------
+  Side Navigation Section
+--------------------------*/
 .side-nav {
     background-color: #161616;
     padding: 30px;
@@ -86,7 +99,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 312px;
+    width: 312px;
     height: 295px;
 }
 
@@ -115,7 +128,9 @@ a.active {
     color: #fff;
 }
 
-/* Styling Blogs */
+/*------------------
+    Styling Blogs
+--------------------*/
 .blog-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,6 +139,10 @@ a.active {
 
 .blog-img {
     margin-bottom: -8px;
+}
+
+.blog-img img {
+    width: 100%;
 }
 
 .blog-info {
@@ -151,6 +170,10 @@ a.active {
     height: 24px;
     width: 24px;
     vertical-align: middle;
+}
+
+.view-all {
+    display: none;
 }
 
 /* Footer Section */
@@ -185,6 +208,7 @@ nav {
 nav ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -218,4 +242,321 @@ nav ul li a {
 
 .social-links ul li a:hover {
     color: #0778E9;
+}
+
+/*------------------------
+Responsive Media Queries
+-------------------------*/
+
+/* Styles for Mobile Devices */
+@media screen and (max-width: 767px) {
+
+    /*--------------------------------
+       Header Styles (Top banner
+    --------------------------------*/
+    body,
+    html {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .top-banner {
+        margin: 20px;
+        margin-bottom: 24px;
+    }
+
+    .banner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .banner-text {
+        width: 100%;
+        padding: 18px 53px;
+        text-align: center;
+    }
+
+
+    .banner-image {
+        padding: 0 10px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -10px;
+    }
+
+    .banner-text h1 {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .banner-text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /*---------------
+       Main Section
+    ---------------*/
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0 20px;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 24px;
+    }
+
+    /*-------------------------
+       Side Navigation Section
+    --------------------------*/
+    .side-nav {
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .side-nav a:first-child {
+        margin-top: 0;
+    }
+
+    .side-nav a:last-child {
+        margin-bottom: 0;
+    }
+
+    .side-nav a {
+        border: 1px solid lightgrey;
+        width: 100%;
+    }
+
+    a.active {
+        background-color: #DD0000;
+        color: #fff;
+    }
+
+    /*------------------
+        Styling Blogs
+    --------------------*/
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .blog-img img {
+        width: 100%;
+    }
+
+
+    /* Footer Section */
+    footer {
+        margin-top: 20px;
+    }
+
+    .goal {
+        height: 100px;
+        font-size: 22px;
+    }
+
+    hr {
+        border: 1px solid #FFFFFF;
+    }
+
+    nav {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        line-height: 50px;
+    }
+
+    /* Social Links */
+    .social-links ul {
+        flex-direction: row;
+    }
+}
+
+/* Styles for Mobile Devices */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*--------------------------------
+       Header Styles (Top banner
+    --------------------------------*/
+    body,
+    html {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .top-banner {
+        margin: 20px;
+    }
+
+    .banner-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 61px 0 0 76px;
+        overflow: hidden;
+    }
+
+    .banner-text {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+
+    .banner-image {
+        padding: 0 10px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -10px;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .banner-text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /*---------------
+       Main Section
+    ---------------*/
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0 20px;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 24px;
+    }
+
+    /*-------------------------
+       Side Navigation Section
+    --------------------------*/
+    .side-nav {
+        background-color: #fff;
+        width: 100%;
+        height: 170px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+    }
+
+    .side-nav a:first-child {
+        margin: 0;
+    }
+
+    .side-nav a:nth-child(2) {
+        margin: 0 22px;
+    }
+
+    .side-nav a:last-child {
+        margin: 0;
+    }
+
+    .side-nav a {
+        border: 1px solid lightgrey;
+        width: 100%;
+    }
+
+    a.active {
+        background-color: #DD0000;
+        color: #fff;
+    }
+
+    /*------------------
+        Styling Blogs
+    --------------------*/
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .blog:nth-child(9) {
+        display: none;
+    }
+
+    .blog-img img {
+        width: 100%;
+    }
+
+    .view-all {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+
+    /* Footer Section */
+    footer {
+        margin-top: 20px;
+    }
+
+    .goal {
+        height: 200px;
+        font-size: 40px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        line-height: 50px;
+    }
+
+    /* Social Links */
+    .social-links ul {
+        flex-direction: row;
+    }
 }
